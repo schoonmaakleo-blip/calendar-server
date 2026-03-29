@@ -47,4 +47,5 @@ app.post("/create-event", async (req, res) => {
   res.send({ success: true });
 });
 
-app.listen(3000, () => console.log("Server draait op 3000"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("Server draait op " + PORT));
